@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import "../App.css";
 
 function Navbar() {
@@ -10,15 +10,15 @@ function Navbar() {
 
   return (
     <header className="bg-background-main">
-      <nav className="flex mx-4 py-4">
-        <div className="ml-auto">
+      <nav className="flex mx-4 py-4 justify-center">
+        <div className="">
           <button onClick={toggleMenu} className="sm:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              className="h-6 w-6 text-gray-500 hover:text-black"
+              className="h-6 w-6  hover:text-black"
             >
               <path
                 strokeLinecap="round"
@@ -34,25 +34,25 @@ function Navbar() {
             }`}
           >
             <a
-              className="text-stone-300 font-semibold hover:font-normal hover:underline underline-offset-4 transition-colors duration-500 ease-in-out"
+              className="text-stone-300 hover:underline underline-offset-4 transition-colors duration-500 ease-in-out"
               href="#homepage"
             >
               <li>HOMEPAGE</li>
             </a>
             <a
-              className="text-stone-300 font-semibold hover:font-normal hover:underline underline-offset-4 transition-colors duration-500 ease-in-out"
+              className="text-stone-300 hover:font-normal hover:underline underline-offset-4 transition-colors duration-500 ease-in-out"
               href="#portfolio"
             >
               <li>PORTFOLIO</li>
             </a>
             <a
-              className="text-stone-300 font-semibold hover:font-normal hover:underline underline-offset-4 transition-colors duration-500 ease-in-out"
+              className="text-stone-300 hover:font-normal hover:underline underline-offset-4 transition-colors duration-500 ease-in-out"
               href="#about"
             >
               <li>ABOUT</li>
             </a>
             <a
-              className="text-stone-300 font-semibold hover:font-normal hover:underline underline-offset-4 transition-colors duration-500 ease-in-out"
+              className="text-stone-300 hover:font-normal hover:underline underline-offset-4 transition-colors duration-500 ease-in-out"
               href="#contact"
             >
               <li>CONTACT</li>

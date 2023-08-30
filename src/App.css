@@ -118,19 +118,21 @@ html {
   justify-content: center;
   align-items: center;
   opacity: 0;
-  transform: translateY(-100%);
-  transition: opacity 0.5s, transform 0.5s;
+  transform: translateY(-50%);
+  transition: opacity 0.5s, transform 0.3s;
 }
 
 .card-class:hover .overlay-class {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 7px;
   opacity: 1;
   transform: translateY(0);
 }
 
 .overlay-class p {
-  color: #000;
+  color: #d8d8d8;
   font-size: 20px;
+  font-weight: 100;
   text-align: center;
 }
 

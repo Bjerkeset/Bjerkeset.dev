@@ -1,17 +1,39 @@
 import React from "react";
 import "../App.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faLink} from "@fortawesome/free-solid-svg-icons";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
 
 const cards = [
   {
+    title: "AI SHARE",
+    description:
+      "AI share is an app where anyone can create a user, create post and share them publicly. The project was made to test my skills with the modern front-end framework Next.js 13 with app directory and mongoDB for data management.",
+    img: "../assets/images/Ai-share-image.png",
+    site_url: "https://bjerkeset-dev.vercel.app/",
+    github: "https://github.com/Bjerkeset/AI-Share/tree/master",
+    Tag_js: false,
+    Tag_nextjs: true,
+    Tag_auth: true,
+    Tag_mongoDB: true,
+    Tag_tailwind: true,
+    Tag_Client: false,
+    Tag_cms: false,
+    Tag_htmlCss: false,
+    Tag_figma: false,
+    Tag_blockchain: false,
+    id: 9,
+  },
+  {
     title: "NOROFF YEAR 1 EXAM",
+    description:
+      "This project was made for my exam in year 1 at Noroff and got graded an A. It is made with vanilla js and html/css as well as figma for design and sanity.io for CMS (headless content management system).",
+    grade: "A",
     img: "../assets/images/exam-image-2.png",
     site_url: "https://fed1-exam-project-bjerkeset.vercel.app/",
     github: "https://github.com/Bjerkeset/fed1-exam-project-Bjerkeset",
-
     Tag_js: true,
+    Tag_nextjs: false,
     Tag_tailwind: false,
     Tag_Client: false,
     Tag_cms: true,
@@ -22,11 +44,14 @@ const cards = [
   },
   {
     title: "TICKETING SYSTEM",
+    description:
+      "A ticketing system built on top of the bitcoin sv network. The project was made to explore the funtionality and capability of the bsv blockchain using the relysia api. The front-end is lacking in design as the purpos was in the logic. The site is unmaintained and may not be functioning correctly.",
     img: "../assets/images/ticketing-project-1.png",
     site_url: "https://gorgeous-paletas-3d837e.netlify.app/",
     github:
       "https://github.com/Bjerkeset/CA-Interaction-design-Bendik-Bjerkeset",
     Tag_js: true,
+    Tag_nextjs: false,
     Tag_tailwind: false,
     Tag_Client: false,
     Tag_cms: false,
@@ -37,10 +62,13 @@ const cards = [
   },
   {
     title: "NOROFF SEMESTER 1 EXAM",
+    description: "",
+    grade: "B",
     img: "../assets/images/semester-project-1.png",
     site_url: "https://fanciful-paprenjak-811add.netlify.app/",
     github: "https://github.com/Bjerkeset/CSM-semester-project",
     Tag_js: true,
+    Tag_nextjs: false,
     Tag_tailwind: false,
     Tag_Client: false,
     Tag_cms: false,
@@ -92,14 +120,19 @@ function Card(props) {
   const {
     img,
     title,
+    description,
+    grade,
+    Tag_auth,
     text,
     id,
     site_url,
     github,
     Tag_js,
+    Tag_mongoDB,
     Tag_tailwind,
     Tag_Client,
     Tag_cms,
+    Tag_nextjs,
     Tag_htmlCss,
     Tag_figma,
     Tag_blockchain,
@@ -116,11 +149,7 @@ function Card(props) {
             }}
           >
             <div className="overlay-class">
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Delectus ullam quisquam earum, nesciunt mollitia, reprehenderit
-                amet distinctio sequi, non enim ab. Numquam quam vitae officia.
-              </p>
+              <p className="text-neutral-100">{description}</p>
             </div>
             <div className="flex z-10 flex-col ml-auto mt-auto ">
               {site_url && (
@@ -152,13 +181,17 @@ function Card(props) {
         </div>
         <div>
           <ul className="flex flex-wrap py-2">
+            {Tag_nextjs && <li className="tag-item">NextJS 13</li>}
             {Tag_js && <li className="tag-item">JavaScript</li>}
             {Tag_tailwind && <li className="tag-item">Tailwind</li>}
+            {Tag_auth && <li className="tag-item">Auth</li>}
             {Tag_Client && <li className="tag-item">Client</li>}
             {Tag_cms && <li className="tag-item">CMS</li>}
             {Tag_htmlCss && <li className="tag-item">HTML/CSS</li>}
             {Tag_figma && <li className="tag-item">Figma</li>}
             {Tag_blockchain && <li className="tag-item">Blockchain</li>}
+            {Tag_mongoDB && <li className="tag-item">MongoDB</li>}
+            {grade && <li className="tag-item">Grade: {grade} </li>}
           </ul>
           <div>
             <h2 className="text-3xl">{title}</h2>

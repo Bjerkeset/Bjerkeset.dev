@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faArrowRightLong} from "@fortawesome/free-solid-svg-icons";
 
 function HeroSection() {
   return (
@@ -24,9 +24,9 @@ function HeroSection() {
             <h1 className="text-base md:text-3xl xl:text-6xl bg-gray-600 bg-opacity-75 p-2 rounded-xl">
               WEB DEVELOPER
             </h1>
-            <h2 className="text-base md:text-3xl xl:text-6xl my-auto">
+            {/* <h2 className="text-base md:text-3xl xl:text-6xl my-auto">
               STUDENT
-            </h2>
+            </h2> */}
           </div>
         </div>
         <div className="relative z-10 flex-wrap pt-8">

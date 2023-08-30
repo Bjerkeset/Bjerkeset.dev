@@ -50,7 +50,7 @@ function Skills() {
               </h2>
             </div>
             <div>
-              <p className="text-gray-300 xl:text-xl font-semibold">
+              <p className="text-gray-300 sm:text-xl font-thin">
                 In a world that constantly evolves, so do I. With a passion for
                 technology and an ever-expanding toolkit, I am dedicated to
                 building innovative solutions that push boundaries. Below is an
@@ -131,7 +131,7 @@ function Skills() {
 }
 
 function Card(props) {
-  const { img, title, text, id } = props;
+  const {img, title, text, id} = props;
 
   return (
     <>
